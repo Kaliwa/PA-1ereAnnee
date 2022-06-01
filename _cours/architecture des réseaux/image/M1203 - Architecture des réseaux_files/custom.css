@@ -1,0 +1,239 @@
+.main {
+  padding: 50px 0 0;
+  height: 100%;
+}
+
+/*.container, col-sm-3, row{
+    height: 100%;
+}
+
+@media (min-width: 992px) {
+  .main {
+    padding: 53px 0 0;
+  }
+}*/
+
+body{
+    padding-top:50px;
+    font-size: 1em;
+}
+
+.objectifs{
+    font-size: 0.9em;
+}
+
+a:active.focus, a:active:focus, a:focus {
+    outline: none;
+    box-shadow:none !important;
+}
+
+.card{
+    border : 0;
+}
+
+.card-body{
+    padding : 0;
+}
+
+
+.backlink{
+    text-align: left;
+}
+
+.txt-img{
+	margin-right: 20px;
+}
+
+/* ALERTS */
+
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+    border-left-width: .25rem;
+    border-radius: .25rem
+}
+
+.bd-callout h4 {
+    margin-top: 0;
+    margin-bottom: .25rem
+}
+
+.bd-callout p:last-child {
+    margin-bottom: 0
+}
+
+.bd-callout code {
+    border-radius: .25rem
+}
+
+.bd-callout+.bd-callout {
+    margin-top: -.25rem
+}
+
+.bd-callout-info {
+    border-left-color: #5bc0de
+}
+
+.bd-callout-info h4 {
+    color: #5bc0de
+}
+
+.bd-callout-warning {
+    border-left-color: #f0ad4e
+}
+
+.bd-callout-warning h4 {
+    color: #f0ad4e
+}
+
+.bd-callout-danger {
+    border-left-color: #d9534f
+}
+
+.bd-callout-danger h4 {
+    color: #d9534f
+}
+
+.bd-callout-code {
+    border-left-color: #d9534f
+}
+
+.bd-callout-code h4 {
+    color: #d9534f
+}
+
+/* END ALERTS */
+h4.header {
+    margin-top: .5em
+}
+
+h3 {
+    margin-top: .7em
+}
+h4 {
+    margin-top: .5em;
+}
+h3:target, h2:target {
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+.card, .collapsing {
+    min-width: 100%;
+}
+
+/* TOC */
+nav[data-toggle='toc'] {
+  top: 100px;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override stickyness so that the navigation does not follow scrolling */
+  nav[data-toggle='toc'] {
+    margin-bottom: 100px;
+    position: static;
+  }
+
+  /* PICK ONE */
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  nav[data-toggle='toc'] .nav .active .nav {
+    display: none;
+  }
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  /*
+  nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }
+  */
+}
+
+nav[data-toggle=toc] .nav-link.active, nav[data-toggle=toc] .nav-link.active:focus, nav[data-toggle=toc] .nav-link.active:hover, nav[data-toggle=toc] .nav-link:focus, nav[data-toggle=toc] .nav-link:hover{
+    color: #1c6ca1 !important;
+    border-color: #1c6ca1 !important;
+}
+
+/* END TOC */
+
+/* CARROUSEL */
+.carousel-item img {
+  width:100%;
+}
+
+.carousel-item{
+  min-height:680px;
+}
+
+.carousel-caption{
+  color: #303030;
+  bottom:0;
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-indicators li{
+  background-color: #aaaaaa;
+    /*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");*/
+}
+
+.carousel-indicators li.active{
+  background-color: #f00;
+    /*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");*/
+}
+
+/* END CARROUSEL */
+
+/* NUMBERING LIST */
+
+
+h1{
+  counter-reset: h2counter;
+}
+h2.numbered {
+  counter-reset: h3counter;
+}
+
+h3.numbered {
+  counter-reset: h4counter;
+}
+
+h2.numbered:before {
+  counter-increment: h2counter;
+  content: counter(h2counter) ".\0000a0\0000a0";
+}
+
+h3.numbered:before {
+  counter-reset: h4counter;
+  counter-increment: h3counter;
+  content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+}
+
+h4.numbered:before {
+  counter-increment: h4counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
+}
+
+/* END NUMBERING LIST */
+
+.example{
+  text-align: right;
+}
+.example td{
+  padding:10px;
+}
+
+.unites tr td:nth-child(3){
+    border-right: 1px solid #dee2e6
+}
+
+.unites thead tr:first-child td:nth-child(1){
+    border-right: 1px solid #dee2e6
+}
+
